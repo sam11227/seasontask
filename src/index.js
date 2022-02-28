@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import CommentDetail from './comment';
+import Card from "./post";
+import "./index.css";
+// import logo from './logo.png ';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+const App = () =>{
+    return(
+        <div className='ui container comments' style={{display:'flex'}}>
+            <Card
+            imgscr='https://www.whatsappimages.in/wp-content/uploads/2021/04/black-whatsapp-dp-images-Photo-Download.gif'
+            title='A Netfkix Orignal Series'
+            sname='DARK'
+            link='https://www.netflix.com/pk/'/>
+            <Card
+            imgscr='https://i.pinimg.com/originals/e3/91/b8/e391b81845081ae72f6c7d5d445cecba.jpg'
+            title='A Netfkix Orignal Series'
+            sname='Extra Curricular'
+            link='https://www.netflix.com/pk/'/>
+            <Card
+            imgscr='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1cY2xKKJogtPZS_-3qB2O3m3BxUMJq59Wnw&usqp=CAU'
+            title='A Netfkix Orignal Series'
+            sname='Stranger Things'
+            link='https://www.netflix.com/pk/'/>
+            {/* <CommentDetail/>
+            <CommentDetail/>
+            <CommentDetail/>
+            <CommentDetail/>
+            <CommentDetail/> */}
+    </div>
+    )
+}
+
+ReactDOM.render(<App/>,document.querySelector('#root'));
